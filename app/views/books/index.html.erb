@@ -1,0 +1,19 @@
+<h1>Books</h1>
+
+<table>
+	<tr>
+		<th></th>
+		<th>Title</th>
+		<th>Opinion</th>
+		<th colspan="3"></th>
+	</tr>
+	<tbody>
+	  <% @books.each do |book| %>
+		<td><%=  %></td>
+		<%= link_to book_path(book.id) do %>
+		   <td><%= book.title %></td>
+		<% end %>
+		<td><%= book.body %></td>
+	  <% end %>
+	</tbody>
+</table>
